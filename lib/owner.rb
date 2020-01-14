@@ -7,7 +7,7 @@ class Owner
   attr_accessor :cat, :dog, :pets
   attr_reader :name, :species
   @@all = []
-  @pets = {:cats => [], :dogs => []}
+  
  
   
   def initialize(name, species="human")
@@ -63,11 +63,8 @@ class Owner
     # lets make an array of all pets using dogs and cats method
     # Then iterate over the array, and set each object (pet) to nervous and owner to nil 
     all_pets = self.dogs + self.cats
-    all_pets.each {
-    
-    
-#    @pets.each{|category, pet| 
-  end
+    all_pets.each {|pet| pet.mood = "nervous"}
+end
   
   def list_pets
     "I have #{@pets[:dogs].length} dog(s), and #{@pets[:cats].length} cat(s)."
