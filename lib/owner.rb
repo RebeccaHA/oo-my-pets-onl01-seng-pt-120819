@@ -63,7 +63,10 @@ class Owner
     # lets make an array of all pets using dogs and cats method
     # Then iterate over the array, and set each object (pet) to nervous and owner to nil 
     all_pets = self.dogs + self.cats
-    all_pets.each {|pet| pet.mood = "nervous"}
+    all_pets.each do |pet|
+      pet.mood = "nervous"
+      pet.owner = nil
+    end
 end
   
   def list_pets
