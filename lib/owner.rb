@@ -60,7 +60,13 @@ class Owner
   end
   
   def sell_pets
-    @pets.each{|category, pet| 
+    # lets make an array of all pets using dogs and cats method
+    # Then iterate over the array, and set each object (pet) to nervous and owner to nil 
+    all_pets = self.dogs + self.cats
+    all_pets.each {
+    
+    
+#    @pets.each{|category, pet| 
   end
   
   def list_pets
